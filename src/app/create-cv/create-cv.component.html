@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Resume Generator</title>
+    <style>
+      #navbar{
+        display: none;
+      }
+    </style>
+
+</head>
+<body>
+    <div class="container" id="cv-form">
+    <h1 class="text-center my-2"> Resume Generator </h1>
+    <p class="text-center"> .................................... </p>
+
+    <div class="row">
+
+    <div class="col-md-6">
+        <!-- first col -->
+        <h3> Personal Information </h3>
+
+        <div class="form-group">
+            <label for="">Your Name </label>
+            <input type="text"
+             id="name"
+             placeholder="Enter here"
+             class="form-control " >
+        </div>
+
+        <div class="form-group mt-2">
+           <label for="">Your Contact </label>
+           <input type="text"
+            id="contact"
+            placeholder="Enter here"
+            class="form-control address" >
+       </div>
+
+       <div class="form-group mt-2">
+           <label for="">Your Address </label>
+        <textarea name="address" id="address" cols="30" rows="5" placeholder="Enter here" class="form-control"></textarea>
+       </div>
+
+       <div class="form-group mt-3">
+           <label for=""> Select your photo </label>
+           <input id="imgField" type="file" class="form-control" />
+       </div>
+
+
+      <p class="text-secondary my-3"> Important Links </p>
+
+    <div class="form-group mt-2">
+       <label for=""> Facebook </label>
+       <input type="text"
+        id="fb"
+        placeholder="Enter here"
+        class="form-control" >
+    </div>
+
+   <div class="form-group mt-2">
+       <label for=""> Instagram </label>
+       <input type="text"
+        id="insta"
+        placeholder="Enter here"
+        class="form-control" >
+   </div>
+
+   <div class="form-group mt-2">
+       <label for=""> LinkedIn </label>
+       <input type="text"
+        id="LI"
+        placeholder="Enter here"
+        class="form-control" >
+   </div>
+
+ </div>
+
+
+    <div class="col-md-6">
+        <!-- second col -->
+         <h3> Professional Information </h3>
+
+         <div class="form-group mt-2" >
+           <label for=""> Objective </label>
+           <textarea name="Objective" id="obField" cols="30" rows="5" placeholder="Enter here" class="form-control"></textarea>
+
+       </div>
+
+       <div class="form-group mt-2" id="we">
+           <label for=""> Work Experience </label>
+           <textarea  cols="30" rows="3" placeholder="Enter here" class="form-control weField"></textarea>
+
+        <div class="container text-center mt-2" id="weAddButton">
+            <button onclick="addNewWE()" class="btn btn-primary btn-sm">Add</button>
+        </div>
+        </div>
+
+
+        <div class="form-group mt-2" id="aq">
+           <label for=""> Academic Qualification  </label>
+           <textarea  cols="30" rows="3" placeholder="Enter here" class="form-control aqField"></textarea>
+
+        <div class="container text-center mt-2" id="aqAddButton">
+            <button onclick="addNewAQ()"class="btn btn-primary btn-sm">Add</button>
+        </div>
+        </div>
+
+       </div>
+
+    </div>
+
+    <div class="container text-center mt-3 mb-2">
+        <button onclick="generateCV()" class="btn btn-primary btn-lg"> Generate CV </button>
+    </div>
+
+    </div>
+
+
+
+
+    <!-- cv-template -->
+    <div class="container" id="cv-template">
+      <div class="row">
+
+       <div class="col-md-4 text-center py-5 " id="bg">
+           <!-- first col -->
+           <img src="profile.png" alt="" class="myimg" height="200px" width="200px" id="imgTemplate">
+
+           <div class="container">
+               <p id="nameT1"> Suresh Kumar </p>
+               <p id="contactT"> +919623455608,+916474388443</p>
+               <p id="addressT"> 14,Rosary Church Street, Chennai , INDIA</p>
+
+               <hr>
+
+               <p> <a id="fbT" href="#">https://www.facebook.com</a></p>
+               <p> <a id="instaT" href="#">https://www.instagram.com</a></p>
+               <p> <a id="LinkedT" href="#">https://wwwlinkedin.com</a></p>
+           </div>
+
+       </div>
+
+       <div class="col-md-8 py-5">
+           <!-- second col -->
+           <h1 id="nameT2" class="text-center" style="font-weight: 980;"> Suresh Kumar </h1>
+
+           <!-- objective card -->
+           <div class="card mt-4">
+               <div class="card-header " id="bg">
+                   <h3> Objective </h3>
+               </div>
+
+               <div  class="card-body">
+                  <p id="objectiveT"> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Vero culpa laboriosam dolorem dignissimos repudiandae unde dolores voluptatum aperiam vel saepe assumenda ratione voluptate,
+                       natus eveniet? Animi quisquam consequatur accusamus cupiditate.</p>
+               </div>
+           </div>
+
+
+           <!-- work experience -->
+           <div class="card mt-4">
+               <div class="card-header" id="bg" >
+                   <h3> Work Experience </h3>
+               </div>
+
+               <div class="card-body">
+                 <ul id="weT">
+                     <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </li>
+                     <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </li>
+                     <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </li>
+                 </ul>
+               </div>
+           </div>
+
+
+
+           <!-- academic Qualification -->
+           <div class="card mt-4">
+               <div class="card-header" id="bg" >
+                   <h3> Academic Qualification </h3>
+               </div>
+
+               <div class="card-body">
+                 <ul id="aqT">
+                     <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </li>
+                     <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </li>
+                     <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </li>
+                 </ul>
+               </div>
+           </div>
+
+           <div class="container mt-3 text-center">
+               <button onclick="printCV()" class="btn" id="pr">
+                   Print CV
+               </button>
+           </div>
+
+       </div>
+      </div>
+    </div>
+
+
+   <script src="/src/assets/js/script.js"></script>
+</body>
+</html>

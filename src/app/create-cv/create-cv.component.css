@@ -1,0 +1,26 @@
+/* #cv-form{
+   display: none;
+} */
+
+body{
+  height: 130vh;
+}
+
+#cv-template{
+  display: none;
+  }
+
+  .myimg{
+      /* border: 1px solid red; */
+      border-radius: 50%;
+  }
+
+  #bg{
+      background-color: aqua;
+  }
+
+  #pr{
+      background-color: aliceblue;
+  }
+
+
